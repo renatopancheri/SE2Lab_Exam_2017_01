@@ -138,6 +138,19 @@ var insertPizza = function insertPizza(pizza)
 
 
 //INSERIRE CODICE QUI SOTTO
+var updatePizzaPrice = function updatePizzaPrice(price,increment,lower)
+{
+	if(lower)
+	{
+		
+
+	}
+	else
+	{
+		
+	}
+}
+
 
 //export functions
 exports.searchPizzaID = searchPizzaID; 
