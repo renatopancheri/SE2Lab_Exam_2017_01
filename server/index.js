@@ -263,7 +263,64 @@ app.post('/addPizza', function(request, response)
 });
 
 //INSERIRE CODICE QUI SOTTO
+/**
+ * @brief add a pizza
+ * @return the pizza added to the list of pizzas
+ */
+app.post('/updatePizzasByPrice', function(request, response) 
+{	
+	var headers = {};
+	headers["Access-Control-Allow-Origin"] = "*";
+	headers["Access-Control-Allow-Methods"] = "POST, GET, PUT, DELETE, OPTIONS";
+	headers["Access-Control-Allow-Credentials"] = false;
+	headers["Access-Control-Max-Age"] = '86400'; // 24 hours
+	headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
+	headers["Content-Type"] = "application/json";
 
+	var price;
+	var increment;
+	var lower;
+    	var checkParam;
+	//check body and parameters
+	if ( typeof request.body !== 'undefined' && request.body)
+	{
+		if ( typeof request.body.price !== 'undefined' && request.body.price &&
+			 typeof request.body.increment !== 'undefined' && request.body.increment &&
+			 typeof request.body.lower !== 'undefined' && request.body.lower
+		   )
+            {
+			 price = parseFloat(request.body.price);
+			 increment = parseFloat(request.body.increment);
+			 lower = request.body.lower=="true";
+            }
+		else 
+			checkParam = "not defined";
+	}
+	else
+	{
+		checkParam = "body undefined";
+	}
+    
+    if (checkParam!="not defined" && checkParam!="body undefined")
+	{
+		//aceptable input
+		
+		
+		//if insertion works correctly
+		var ret=pizzaManager.updatePizzaPrice(price,increment,lower))
+		{
+			response.writeHead(200, headers);
+			response.end(JSON.stringify(ret));
+		}
+	}
+    else    
+	{
+		//unaceptable input
+		response.writeHead(406, headers);
+		response.end(JSON.stringify());
+	}   
+
+});
 
 
 
