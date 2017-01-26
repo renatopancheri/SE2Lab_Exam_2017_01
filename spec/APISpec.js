@@ -35,6 +35,31 @@ describe("Test /showList", function() {
     }); 
 });
  
+describe("Test /deletePizza", function() {
+	var data = {ID: '1'};
+	it("to returns status code 200", function(done) {
+	  client.post(base_url + "deletePizza/", data, function(err, res, body) {
+		expect(res.statusCode).toBe(200);
+		done();
+	  });
+	});
+	data = {ID: '10'};
+	it("to returns status code 404", function(done) {
+	  client.post(base_url + "deletePizza/", data, function(err, res, body) {
+		expect(res.statusCode).toBe(404);
+		done();
+	  });
+	});
+	data = {};
+	it("to returns status code 406", function(done) {
+	  client.post(base_url + "deletePizza/", data, function(err, res, body) {
+		expect(res.statusCode).toBe(406);
+		done();
+	  });
+	});
+});
+
+
 // Test for /searchPizza
 describe("Test /searchPizza", function() {
 	//set the data

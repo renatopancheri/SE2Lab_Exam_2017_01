@@ -18,7 +18,7 @@ paths:
       description: it returns the complete menu
       responses:
         200:
-          description: web page with the menu
+          description: JSON with the menu
           
   /searchPizza:
     post:
@@ -52,11 +52,6 @@ paths:
         - name: ID
           in: formData
           description: ID of the pizza
-          required: false
-          type: string
-        - name: name
-          in: formData
-          description: name of the pizza
           required: false
           type: string
       responses:
