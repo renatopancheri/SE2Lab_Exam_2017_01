@@ -142,12 +142,24 @@ var updatePizzaPrice = function updatePizzaPrice(price,increment,lower)
 {
 	if(lower)
 	{
-		
+		for(i=0;i<menu.length;i++)
+		{
+			if(menu[i].price<price)
+			{
+				menu[i].price=menu[i].price+increment;
+			}
+		}
 
 	}
 	else
 	{
-		
+		for(i=0;i<menu.length;i++)
+		{
+			if(menu[i].price>=price)
+			{
+				menu[i].price=menu[i].price+increment;
+			}
+		}
 	}
 }
 
