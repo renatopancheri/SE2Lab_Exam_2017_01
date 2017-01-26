@@ -157,7 +157,7 @@ var updatePizzaPrice = function updatePizzaPrice(price,increment,lower)
 	{
 		for(i=0;i<menu.length;i++)
 		{
-			if(menu[i].price>=price)
+			if(menu[i].price>price)
 			{
 				menu[i].price=menu[i].price+increment;
 				ret.push(menu[i]);
