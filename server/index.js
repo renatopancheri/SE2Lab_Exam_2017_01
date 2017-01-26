@@ -307,7 +307,7 @@ app.post('/updatePizzasByPrice', function(request, response)
 		
 		
 		//if insertion works correctly
-		var ret=pizzaManager.updatePizzaPrice(price,increment,lower))
+		var ret=pizzaManager.updatePizzaPrice(price,increment,lower)
 		{
 			response.writeHead(200, headers);
 			response.end(JSON.stringify(ret));

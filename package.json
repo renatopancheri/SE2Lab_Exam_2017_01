@@ -1,0 +1,19 @@
+{
+  "name": "esame",
+  "version": "1.0.0",
+  "description": "esame",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatopancheri/SE2Lab_Exam_2017_01.git"
+  },
+  "author": "renato pancheri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatopancheri/SE2Lab_Exam_2017_01/issues"
+  },
+  "homepage": "https://github.com/renatopancheri/SE2Lab_Exam_2017_01#readme"
+}
