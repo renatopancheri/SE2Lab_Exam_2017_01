@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/renatopancheri/SE2Lab_Exam_2017_01/issues"
   },
-  "homepage": "https://github.com/renatopancheri/SE2Lab_Exam_2017_01#readme"
+  "homepage": "https://github.com/renatopancheri/SE2Lab_Exam_2017_01#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  }
 }
